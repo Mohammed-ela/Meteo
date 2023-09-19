@@ -15,3 +15,59 @@ body{
     padding: 0 10vh;
     scroll-behavior: smooth;
 }
+h1{
+    font-size: 30px;
+    color: #262473;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#information{
+    font-size: 20px;
+    color: var(--third-color);
+}
+button{
+    background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#formulaire{
+    display: flex;
+    align-items: center;
+}
+
+#formulaire:focus{
+   border: 1px solid var(--fourth-color);
+   padding-left: 5px;
+}
+#formulaire::placeholder{
+    padding: 15px;
+ }
+#ville{
+    border: none;
+    border-radius: 20px;
+    height: 35px;
+    width: 100dvh;
+}
+
+/*  RESPONSIVITE */
+
+@media screen and (min-width: 950px) {
+    /* Vos styles CSS pour les écrans d'une largeur minimale de 950px vont ici */
+    /* Par exemple, vous pouvez définir des styles pour les grands écrans ici */
+  }
+  
