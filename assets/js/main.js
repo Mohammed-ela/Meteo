@@ -24,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 const id = data.id;
                 // on recuperer l'url a redirigé 
                 const openWeatherMapURL = `https://openweathermap.org/city/${id}`;
+                  // Redirection 
+                  window.open(openWeatherMapURL, '_blank');
+                        /* window.location.href = openWeatherMapURL; */
                 }
-                // Redirection 
-                window.location.href = openWeatherMapURL;
+              
             })
             .catch(error => {
-               
+               // erreur au niveau de l'api
                 information.innerHTML = "Une erreur s'est produite lors de la récupération des données. Veuillez réessayer plus tard.";
             });
     });
