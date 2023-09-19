@@ -9,7 +9,7 @@
 
 
 body{
-    background-color:var(--secondary-color);
+    background-color:var(--bg-color);
     color: #000000;
     font-family: 'roboto';
     padding: 0 10vh;
@@ -17,11 +17,11 @@ body{
 }
 h1{
     font-size: 30px;
-    color: #262473;
+    color: #000000;
 }
 img{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 header{
     display: flex;
@@ -38,7 +38,7 @@ header{
 
 #information{
     font-size: 20px;
-    color: var(--third-color);
+    color: var(--fourth-color);
 }
 button{
     background: transparent;
@@ -51,23 +51,44 @@ button{
 }
 
 #formulaire:focus{
-   border: 1px solid var(--fourth-color);
+   border: solid var(--fourth-color) 1px;
    padding-left: 5px;
 }
-#formulaire::placeholder{
+::placeholder{
     padding: 15px;
+    color: var(--third-color);
  }
 #ville{
     border: none;
     border-radius: 20px;
-    height: 35px;
+    height: 40px;
     width: 100dvh;
+    font-size: 25px;
+background-color: var(--secondary-color);
 }
 
 /*  RESPONSIVITE */
 
-@media screen and (min-width: 950px) {
-    /* Vos styles CSS pour les écrans d'une largeur minimale de 950px vont ici */
-    /* Par exemple, vous pouvez définir des styles pour les grands écrans ici */
+@media screen and (max-width: 950px) {
+    #ville{
+        width: 60dvh;
+        font-size: 18px;
+    }
   }
-  
+
+@media screen and (max-width: 582px) {
+    #ville{
+        width: 40dvh;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+  }
+
+@media screen and (max-width: 400px) {
+    #ville{
+        width: 20dvh;
+        font-size: 15px;
+    }
+  }
