@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
             .then(response => response.json())
             .then(data => {
-                
+                const id = data.id;
+                console.log(id);
             })
             .catch(error => {
                 information.innerHTML = "La ville n'est pas connu. Veuillez vérifier l'orthographe.";
