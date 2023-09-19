@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
     //on enregistre la ville rentré par l'internaute dans une variable
         const city = ville.value;
+        const key = "8e87a9f44d79a17621443c268a024757";
     // on appel la methode Fetch qui va nous permettent de lire les données JSON
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=VOTRE_CLE_API`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
             .then(response => response.json())
             .then(data => {
                 
